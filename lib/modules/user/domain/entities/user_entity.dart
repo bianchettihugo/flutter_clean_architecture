@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class UserEntity {
   final String name;
   final String email;
@@ -10,4 +11,30 @@ class UserEntity {
     this.password = '',
     this.photoUrl = '',
   });
+
+  bool get isEmailValid => RegExp(
+        r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*",
+      ).hasMatch(email);
+
+  bool get isPasswordValid => password.length > 4;
+
+  bool get isNameValid => name.isNotEmpty;
+
+  @override
+  bool operator ==(covariant UserEntity other) {
+    if (identical(this, other)) return true;
+
+    return other.name == name &&
+        other.email == email &&
+        other.password == password &&
+        other.photoUrl == photoUrl;
+  }
+
+  @override
+  int get hashCode {
+    return name.hashCode ^
+        email.hashCode ^
+        password.hashCode ^
+        photoUrl.hashCode;
+  }
 }
