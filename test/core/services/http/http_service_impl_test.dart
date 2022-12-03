@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_clean_architecture/core/services/http/dio_http_service.dart';
+import 'package:flutter_clean_architecture/core/services/http/http_service_impl.dart';
 import 'package:flutter_clean_architecture/core/services/http/http_service.dart';
 import 'package:flutter_clean_architecture/core/utils/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
