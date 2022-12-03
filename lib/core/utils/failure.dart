@@ -1,3 +1,5 @@
+import 'package:flutter_clean_architecture/core/utils/exception.dart';
+
 class Failure {
   final String message;
   final String module;
@@ -8,6 +10,10 @@ class Failure {
     this.module = '',
     this.statusCode = 0,
   });
+
+  factory Failure.fromException(AppException exception, [String module = '']) {
+    return Failure(exception.message, module: module);
+  }
 
   @override
   bool operator ==(covariant Failure other) {

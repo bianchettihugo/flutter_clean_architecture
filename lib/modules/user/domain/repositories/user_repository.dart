@@ -7,4 +7,6 @@ abstract class UserRepository {
   Future<Result<bool>> signUp(UserEntity user);
 
   Future<Result<bool>> signOut();
+
+  Future<Result<UserEntity>> getUser();
 }
