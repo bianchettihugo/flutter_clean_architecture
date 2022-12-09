@@ -1,10 +1,13 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/core/services/storage/secure_storage_service.dart';
 import 'package:flutter_clean_architecture/modules/user/data/datasources/user_local_datasource.dart';
 import 'package:flutter_clean_architecture/modules/user/data/datasources/user_remote_datasource.dart';
 import 'package:flutter_clean_architecture/modules/user/domain/repositories/user_repository.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:mocktail/mocktail.dart';
+
+class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 
 class MockDio extends Mock implements Dio {}
 
