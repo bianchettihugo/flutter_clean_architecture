@@ -1,7 +1,7 @@
 import 'package:flutter_clean_architecture/modules/user/data/datasources/user_remote_datasource.dart';
 import 'package:flutter_clean_architecture/modules/user/domain/entities/user_entity.dart';
 
-class UserRemoteDatarouceMock extends UserRemoteDatasource {
+class UserRemoteDatasourceMock extends UserRemoteDatasource {
   @override
   Future<UserEntity> signIn({
     required String email,
