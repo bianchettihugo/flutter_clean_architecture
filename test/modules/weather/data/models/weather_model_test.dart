@@ -6,14 +6,14 @@ import '../../../../utils/fixture_reader.dart';
 
 void main() {
   test('should check weather model equality', () async {
-    final weather1 = WeatherModel(
+    const weather1 = WeatherModel(
       temperature: 10,
       windSpeed: 10,
       humidity: 10,
       rain: 10,
     );
 
-    final weather2 = WeatherModel(
+    const weather2 = WeatherModel(
       temperature: 10,
       windSpeed: 10,
       humidity: 10,
@@ -27,7 +27,7 @@ void main() {
   });
 
   test('should covert weather model to JSON', () async {
-    final weather1 = WeatherModel(
+    const weather1 = WeatherModel(
       temperature: 10,
       windSpeed: 10,
       humidity: 10,
@@ -56,7 +56,7 @@ void main() {
 
   test('should covert weather model from JSON even with missing values',
       () async {
-    final weather1 = WeatherModel(
+    const weather1 = WeatherModel(
       temperature: 0,
       windSpeed: 0,
       humidity: 0,
