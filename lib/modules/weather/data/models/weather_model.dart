@@ -1,14 +1,18 @@
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter_clean_architecture/modules/weather/domain/entities/weather_entity.dart';
 
-class WeatherModel extends WeatherEntity implements Equatable {
-  WeatherModel({
-    required super.temperature,
-    required super.windSpeed,
-    required super.humidity,
-    required super.rain,
+class WeatherModel extends Equatable {
+  final double temperature;
+  final double windSpeed;
+  final double humidity;
+  final double rain;
+
+  const WeatherModel({
+    required this.temperature,
+    required this.windSpeed,
+    required this.humidity,
+    required this.rain,
   });
 
   @override
