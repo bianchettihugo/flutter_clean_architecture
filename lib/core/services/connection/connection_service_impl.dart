@@ -22,11 +22,11 @@ class ConnectionServiceImpl extends ConnectionService {
 
   StreamSubscription? _subscription;
 
-  ConnectionServiceImpl(
-      {required AddressChecker addressChecker,
-      required Connectivity connectivity})
-      : _addressChecker = addressChecker,
-        _connectivity = connectivity;
+  ConnectionServiceImpl({
+    AddressChecker? addressChecker,
+    Connectivity? connectivity,
+  })  : _addressChecker = addressChecker ?? AddressChecker(),
+        _connectivity = connectivity ?? Connectivity();
 
   @override
   StreamController<ConnectionEvent> connectionListerner() {

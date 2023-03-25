@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/core/services/connection/address_checker.dart';
 import 'package:flutter_clean_architecture/core/services/connection/connection_service.dart';
 import 'package:flutter_clean_architecture/core/services/http/http_service.dart';
+import 'package:flutter_clean_architecture/core/services/permissions/permission_handler.dart';
 import 'package:flutter_clean_architecture/core/services/storage/storage_service.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,3 +24,5 @@ class MockHttpService extends Mock implements HttpService {}
 class MockConnectivity extends Mock implements Connectivity {}
 
 class MockConnectionService extends Mock implements ConnectionService {}
+
+class MockPermissionHandler extends Mock implements PermissionHandler {}
