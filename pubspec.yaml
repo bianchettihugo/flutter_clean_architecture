@@ -20,6 +20,7 @@ dependencies:
   shared_preferences: ^2.0.20
   connectivity_plus: ^3.0.3
   permission_handler: ^10.2.0
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:
