@@ -26,7 +26,7 @@ void main() {
     expect(weather1.hashCode == weather2.hashCode, true);
   });
 
-  test('should covert weather model to JSON', () async {
+  test('should convert weather model to JSON', () async {
     const weather1 = WeatherModel(
       temperature: 10,
       windSpeed: 10,
@@ -40,7 +40,7 @@ void main() {
     );
   });
 
-  test('should covert weather model from JSON', () async {
+  test('should convert weather model from JSON', () async {
     final weather1 = WeatherModel(
       temperature: 15.9,
       windSpeed: 15.5,
@@ -54,7 +54,7 @@ void main() {
     );
   });
 
-  test('should covert weather model from JSON even with missing values',
+  test('should convert weather model from JSON even with missing values',
       () async {
     const weather1 = WeatherModel(
       temperature: 0,

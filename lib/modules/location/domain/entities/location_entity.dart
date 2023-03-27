@@ -1,11 +1,14 @@
-class Location {
+class LocationEntity {
   final double latitude;
   final double longitude;
 
-  Location(this.latitude, this.longitude);
+  LocationEntity({
+    required this.latitude,
+    required this.longitude,
+  });
 
   @override
-  bool operator ==(covariant Location other) {
+  bool operator ==(covariant LocationEntity other) {
     if (identical(this, other)) return true;
 
     return other.latitude == latitude && other.longitude == longitude;
