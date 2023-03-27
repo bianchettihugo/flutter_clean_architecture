@@ -8,6 +8,8 @@ import 'package:flutter_clean_architecture/core/services/location/geolocator_han
 import 'package:flutter_clean_architecture/core/services/location/location_service.dart';
 import 'package:flutter_clean_architecture/core/services/permissions/permission_handler.dart';
 import 'package:flutter_clean_architecture/core/services/storage/storage_service.dart';
+import 'package:flutter_clean_architecture/modules/location/data/datasources/service_location_datasource.dart';
+import 'package:flutter_clean_architecture/modules/location/domain/repositories/location_repository.dart';
 import 'package:flutter_clean_architecture/modules/weather/data/datasources/local_weather_datasource.dart';
 import 'package:flutter_clean_architecture/modules/weather/data/datasources/remote_weather_datasource.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/repositories/weather_repository.dart';
@@ -43,3 +45,8 @@ class MockRemoteWeatherDatasource extends Mock
     implements RemoteWeatherDatasource {}
 
 class MockWeatherRepository extends Mock implements WeatherRepository {}
+
+class MockServiceLocationDatasource extends Mock
+    implements ServiceLocationDatasource {}
+
+class MockLocationRepository extends Mock implements LocationRepository {}

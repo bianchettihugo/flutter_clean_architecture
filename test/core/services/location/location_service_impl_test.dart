@@ -2,6 +2,7 @@ import 'package:flutter_clean_architecture/core/services/location/geolocator_han
 import 'package:flutter_clean_architecture/core/services/location/location.dart';
 import 'package:flutter_clean_architecture/core/services/location/location_service.dart';
 import 'package:flutter_clean_architecture/core/services/location/location_service_impl.dart';
+import 'package:flutter_clean_architecture/core/utils/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:mocktail/mocktail.dart';
@@ -18,7 +19,7 @@ void main() {
   });
 
   test(
-      'should throw an InvalidPermissionException when location service is not enabled',
+      'should throw an PermissionException when location service is not enabled',
       () async {
     when(() => geolocatorHandler.isLocationServiceEnabled()).thenAnswer(
       (invocation) async => false,
@@ -26,12 +27,11 @@ void main() {
 
     expect(
       locationService.fetchLocation,
-      throwsA(isA<InvalidPermissionException>()),
+      throwsA(isA<PermissionException>()),
     );
   });
 
-  test(
-      'should throw an InvalidPermissionException when location permission is denied',
+  test('should throw an PermissionException when location permission is denied',
       () async {
     when(() => geolocatorHandler.isLocationServiceEnabled()).thenAnswer(
       (invocation) async => true,
@@ -42,12 +42,12 @@ void main() {
 
     expect(
       locationService.fetchLocation,
-      throwsA(isA<InvalidPermissionException>()),
+      throwsA(isA<PermissionException>()),
     );
   });
 
   test(
-      'should throw an InvalidPermissionException when location permission is denied forever',
+      'should throw an PermissionException when location permission is denied forever',
       () async {
     when(() => geolocatorHandler.isLocationServiceEnabled()).thenAnswer(
       (invocation) async => true,
@@ -58,7 +58,7 @@ void main() {
 
     expect(
       locationService.fetchLocation,
-      throwsA(isA<InvalidPermissionException>()),
+      throwsA(isA<PermissionException>()),
     );
   });
 

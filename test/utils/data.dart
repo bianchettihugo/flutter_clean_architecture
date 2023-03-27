@@ -1,3 +1,5 @@
+import 'package:flutter_clean_architecture/modules/location/data/models/location_model.dart';
+import 'package:flutter_clean_architecture/modules/location/domain/entities/location_entity.dart';
 import 'package:flutter_clean_architecture/modules/weather/data/models/weather_model.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/entities/weather_entity.dart';
 
@@ -67,4 +69,14 @@ final weatherEntity = WeatherEntity(
   windSpeed: 10,
   humidity: 10,
   rain: 10,
+);
+
+const locationModel = LocationModel(
+  latitude: 10,
+  longitude: 10,
+);
+
+final locationEnity = LocationEntity(
+  latitude: 10,
+  longitude: 10,
 );

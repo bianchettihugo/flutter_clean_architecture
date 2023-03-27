@@ -1,6 +1,7 @@
 import 'package:flutter_clean_architecture/core/services/location/geolocator_handler.dart';
 import 'package:flutter_clean_architecture/core/services/location/location.dart';
 import 'package:flutter_clean_architecture/core/services/location/location_service.dart';
+import 'package:flutter_clean_architecture/core/utils/exception.dart';
 import 'package:geolocator/geolocator.dart';
 
 class LocationServiceImpl extends LocationService {
@@ -16,13 +17,13 @@ class LocationServiceImpl extends LocationService {
 
     serviceEnabled = await _geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      throw const InvalidPermissionException(0);
+      throw PermissionException();
     }
 
     permission = await _geolocator.checkPermission();
     if (permission == LocationPermission.denied ||
         permission == LocationPermission.deniedForever) {
-      throw const InvalidPermissionException(0);
+      throw PermissionException();
     }
 
     final result = await _geolocator.getCurrentPosition();

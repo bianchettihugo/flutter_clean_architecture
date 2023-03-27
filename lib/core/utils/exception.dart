@@ -27,3 +27,5 @@ class AppException {
     return message.hashCode ^ statusCode.hashCode;
   }
 }
+
+class PermissionException implements Exception {}
