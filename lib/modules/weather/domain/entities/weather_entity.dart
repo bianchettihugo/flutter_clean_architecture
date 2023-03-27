@@ -3,12 +3,14 @@ class WeatherEntity {
   final double windSpeed;
   final double humidity;
   final double rain;
+  final bool offlineData;
 
   WeatherEntity({
     required this.temperature,
     required this.windSpeed,
     required this.humidity,
     required this.rain,
+    this.offlineData = false,
   });
 
   @override
@@ -18,7 +20,8 @@ class WeatherEntity {
     return other.temperature == temperature &&
         other.windSpeed == windSpeed &&
         other.humidity == humidity &&
-        other.rain == rain;
+        other.rain == rain &&
+        other.offlineData == offlineData;
   }
 
   @override
@@ -26,6 +29,23 @@ class WeatherEntity {
     return temperature.hashCode ^
         windSpeed.hashCode ^
         humidity.hashCode ^
+        offlineData.hashCode ^
         rain.hashCode;
+  }
+
+  WeatherEntity copyWith({
+    double? temperature,
+    double? windSpeed,
+    double? humidity,
+    double? rain,
+    bool? offlineData,
+  }) {
+    return WeatherEntity(
+      temperature: temperature ?? this.temperature,
+      windSpeed: windSpeed ?? this.windSpeed,
+      humidity: humidity ?? this.humidity,
+      rain: rain ?? this.rain,
+      offlineData: offlineData ?? this.offlineData,
+    );
   }
 }

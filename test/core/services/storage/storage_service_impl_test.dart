@@ -19,21 +19,21 @@ void main() {
     StorageServiceImpl();
   });
 
-  test('should sava data on secure storage', () {
+  test('should sava data on storage', () {
     when(() => storage.setString('test', '123'))
         .thenAnswer((invocation) async => true);
 
     storageService.save('test', '123');
   });
 
-  test('should read data on secure storage', () async {
+  test('should read data on storage', () async {
     when(() => storage.getString('test')).thenAnswer((invocation) => '123');
 
     final result = await storageService.read('test');
     expect(result, '123');
   });
 
-  test('should delete data on secure storage', () async {
+  test('should delete data on storage', () async {
     when(() => storage.remove('test')).thenAnswer((invocation) async => true);
 
     await storageService.delete('test');

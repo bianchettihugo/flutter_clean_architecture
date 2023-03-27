@@ -1,3 +1,6 @@
+import 'package:flutter_clean_architecture/modules/weather/data/models/weather_model.dart';
+import 'package:flutter_clean_architecture/modules/weather/domain/entities/weather_entity.dart';
+
 final humidity = <double>[
   70,
   73,
@@ -51,3 +54,17 @@ final rain = <double>[
   19,
   19
 ];
+
+const weatherModel = WeatherModel(
+  temperature: 10,
+  windSpeed: 10,
+  humidity: 10,
+  rain: 10,
+);
+
+final weatherEntity = WeatherEntity(
+  temperature: 10,
+  windSpeed: 10,
+  humidity: 10,
+  rain: 10,
+);
