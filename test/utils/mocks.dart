@@ -7,6 +7,7 @@ import 'package:flutter_clean_architecture/core/services/http/http_service.dart'
 import 'package:flutter_clean_architecture/core/services/location/geolocator_handler.dart';
 import 'package:flutter_clean_architecture/core/services/location/location_service.dart';
 import 'package:flutter_clean_architecture/core/services/permissions/permission_handler.dart';
+import 'package:flutter_clean_architecture/core/services/permissions/permission_service.dart';
 import 'package:flutter_clean_architecture/core/services/storage/storage_service.dart';
 import 'package:flutter_clean_architecture/modules/location/data/datasources/service_location_datasource.dart';
 import 'package:flutter_clean_architecture/modules/location/domain/repositories/location_repository.dart';
@@ -35,6 +36,8 @@ class MockConnectionService extends Mock implements ConnectionService {}
 class MockPermissionHandler extends Mock implements PermissionHandler {}
 
 class MockLocationService extends Mock implements LocationService {}
+
+class MockPermissionService extends Mock implements PermissionService {}
 
 class MockGeolocatorHandler extends Mock implements GeolocatorHandler {}
 
