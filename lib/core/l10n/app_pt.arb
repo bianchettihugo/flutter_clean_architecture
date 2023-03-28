@@ -1,4 +1,5 @@
 {
     "enableGeolocation": "Habilitar Geolocalização",
-    "enableGeolocationMsg": "Precisamos da sua localização para coletar informações do clima"
+    "enableGeolocationMsg": "Precisamos da sua localização para coletar informações do clima",
+    "enableGeolocationBtn": "Checar permissões"  
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/core/styles/typography.dart';
 import 'package:flutter_clean_architecture/core/utils/application.dart';
+import 'package:flutter_clean_architecture/core/widgets/button/button.dart';
 
 class LocationPage extends StatelessWidget {
   const LocationPage({super.key});
@@ -26,7 +27,14 @@ class LocationPage extends StatelessWidget {
               align: TextAlign.center,
             ),
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: Button(
+              text: Application.strings.enableGeolocationBtn,
+              onTap: () {},
+            ),
+          ),
         ],
       ),
     );

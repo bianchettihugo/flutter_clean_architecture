@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/core/utils/application.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -17,6 +19,7 @@ extension WidgetTesterConfig on WidgetTester {
       MaterialApp(
         navigatorObservers: [mockObserver],
         localizationsDelegates: const [
+          AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
@@ -31,7 +34,10 @@ extension WidgetTesterConfig on WidgetTester {
           brightness: Brightness.dark,
           primaryColor: const Color(0xff6D67D0),
         ),
-        home: Scaffold(body: widget),
+        home: Builder(builder: (context) {
+          Application.localization = AppLocalizations.of(context);
+          return Scaffold(body: widget);
+        }),
       ),
     );
   }
