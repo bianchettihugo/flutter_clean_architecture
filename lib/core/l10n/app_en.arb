@@ -1,0 +1,4 @@
+{
+    "enableGeolocation": "Enable Geolocation",
+    "enableGeolocationMsg": "We need your location to fetch weather information"
+}

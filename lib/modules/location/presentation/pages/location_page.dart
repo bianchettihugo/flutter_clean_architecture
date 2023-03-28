@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/core/styles/typography.dart';
+import 'package:flutter_clean_architecture/core/utils/application.dart';
 
 class LocationPage extends StatelessWidget {
   const LocationPage({super.key});
@@ -15,7 +17,16 @@ class LocationPage extends StatelessWidget {
             width: 164,
           ),
           const SizedBox(height: 30),
-          //Text('Enable Geolocation')
+          StyledText.titleLarge(Application.strings.enableGeolocation),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 80),
+            child: StyledText.bodyLarge(
+              Application.strings.enableGeolocationMsg,
+              align: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 40),
         ],
       ),
     );
