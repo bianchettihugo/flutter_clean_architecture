@@ -1,5 +1,8 @@
 {
     "enableGeolocation": "Enable Geolocation",
     "enableGeolocationMsg": "We need your location to fetch weather information",
-    "enableGeolocationBtn": "Check permissions"  
+    "enableGeolocationBtn": "Check permissions",
+    "geolocationError": "Geolocation error",
+    "geolocationErrorMsg": "Something went wrong while collecting location information. Please, try again",
+    "geolocationErrorBtn": "Try again" 
 }

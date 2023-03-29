@@ -6,9 +6,11 @@ class WeatherPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xff191919),
-      body: LocationPage(),
+    return Scaffold(
+      backgroundColor: const Color(0xff191919),
+      body: LocationPage(
+        onButtonPressed: () {},
+      ),
     );
   }
 }

@@ -4,10 +4,10 @@ import 'package:flutter_clean_architecture/core/styles/typography.dart';
 import 'package:flutter_clean_architecture/core/utils/application.dart';
 import 'package:flutter_clean_architecture/core/widgets/button/button.dart';
 
-class LocationPage extends StatelessWidget {
+class LocationErrorPage extends StatelessWidget {
   final VoidCallback onButtonPressed;
 
-  const LocationPage({required this.onButtonPressed, super.key});
+  const LocationErrorPage({required this.onButtonPressed, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,16 @@ class LocationPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            Files.weatherLocation,
+            Files.weatherError,
             width: 164,
           ),
           const SizedBox(height: 30),
-          StyledText.titleLarge(Application.strings.enableGeolocation),
+          StyledText.titleLarge(Application.strings.geolocationError),
           const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 80),
             child: StyledText.bodyLarge(
-              Application.strings.enableGeolocationMsg,
+              Application.strings.geolocationErrorMsg,
               align: TextAlign.center,
             ),
           ),
@@ -34,7 +34,7 @@ class LocationPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Button(
-              text: Application.strings.enableGeolocationBtn,
+              text: Application.strings.geolocationErrorBtn,
               onTap: onButtonPressed,
             ),
           ),
