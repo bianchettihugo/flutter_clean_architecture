@@ -10,6 +10,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 10,
+      weatherCode: 1,
     );
 
     expect(
@@ -19,6 +20,7 @@ void main() {
           windSpeed: 10,
           humidity: 10,
           rain: 10,
+          weatherCode: 1,
         ));
   });
 
@@ -28,6 +30,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 10,
+      weatherCode: 1,
     );
 
     expect(
@@ -37,6 +40,7 @@ void main() {
           windSpeed: 10,
           humidity: 10,
           rain: 10,
+          weatherCode: 1,
         ));
   });
 }

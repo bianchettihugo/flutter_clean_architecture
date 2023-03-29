@@ -3,6 +3,7 @@ class WeatherEntity {
   final double windSpeed;
   final double humidity;
   final double rain;
+  final int weatherCode;
   final bool offlineData;
 
   WeatherEntity({
@@ -11,6 +12,7 @@ class WeatherEntity {
     required this.humidity,
     required this.rain,
     this.offlineData = false,
+    this.weatherCode = 0,
   });
 
   WeatherEntity.empty({
@@ -19,6 +21,7 @@ class WeatherEntity {
     this.humidity = 0,
     this.rain = 0,
     this.offlineData = false,
+    this.weatherCode = 0,
   });
 
   @override
@@ -29,7 +32,8 @@ class WeatherEntity {
         other.windSpeed == windSpeed &&
         other.humidity == humidity &&
         other.rain == rain &&
-        other.offlineData == offlineData;
+        other.offlineData == offlineData &&
+        other.weatherCode == weatherCode;
   }
 
   @override
@@ -38,6 +42,7 @@ class WeatherEntity {
         windSpeed.hashCode ^
         humidity.hashCode ^
         offlineData.hashCode ^
+        weatherCode.hashCode ^
         rain.hashCode;
   }
 
@@ -46,6 +51,7 @@ class WeatherEntity {
     double? windSpeed,
     double? humidity,
     double? rain,
+    int? weatherCode,
     bool? offlineData,
   }) {
     return WeatherEntity(
@@ -54,6 +60,7 @@ class WeatherEntity {
       humidity: humidity ?? this.humidity,
       rain: rain ?? this.rain,
       offlineData: offlineData ?? this.offlineData,
+      weatherCode: weatherCode ?? this.weatherCode,
     );
   }
 }

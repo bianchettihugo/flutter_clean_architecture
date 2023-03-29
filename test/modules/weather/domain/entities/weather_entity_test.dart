@@ -8,6 +8,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 10,
+      weatherCode: 1,
       offlineData: false,
     );
 
@@ -16,6 +17,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 10,
+      weatherCode: 1,
       offlineData: false,
     );
 
@@ -29,6 +31,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 10,
+      weatherCode: 1,
       offlineData: false,
     );
 
@@ -37,6 +40,7 @@ void main() {
       windSpeed: 10,
       humidity: 10,
       rain: 20,
+      weatherCode: 1,
       offlineData: false,
     );
 
@@ -44,12 +48,13 @@ void main() {
     expect(weather1.copyWith(rain: 20), weather2);
   });
 
-  test('should check an empty WeatherEntity', () async {
+  test('should create an empty WeatherEntity', () async {
     final weather1 = WeatherEntity(
       temperature: 0,
       windSpeed: 0,
       humidity: 0,
       rain: 0,
+      weatherCode: 0,
       offlineData: false,
     );
 

@@ -8,6 +8,7 @@ class WeatherMapper {
       windSpeed: entity.windSpeed,
       humidity: entity.humidity,
       rain: entity.rain,
+      weatherCode: entity.weatherCode,
     );
   }
 
@@ -17,6 +18,7 @@ class WeatherMapper {
       windSpeed: model.windSpeed,
       humidity: model.humidity,
       rain: model.rain,
+      weatherCode: model.weatherCode,
     );
   }
 }

@@ -46,6 +46,7 @@ void main() {
       windSpeed: 15.5,
       humidity: humidity[DateTime.now().hour],
       rain: rain[DateTime.now().hour],
+      weatherCode: 3,
     );
 
     expect(

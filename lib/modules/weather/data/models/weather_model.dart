@@ -7,21 +7,19 @@ class WeatherModel extends Equatable {
   final double windSpeed;
   final double humidity;
   final double rain;
+  final int weatherCode;
 
   const WeatherModel({
     required this.temperature,
     required this.windSpeed,
     required this.humidity,
     required this.rain,
+    this.weatherCode = 0,
   });
 
   @override
-  List<Object?> get props => [
-        temperature,
-        windSpeed,
-        humidity,
-        rain,
-      ];
+  List<Object?> get props =>
+      [temperature, windSpeed, humidity, rain, weatherCode];
 
   @override
   bool? get stringify => true;
@@ -47,6 +45,8 @@ class WeatherModel extends Equatable {
       rain: double.parse(
           map['hourly']?['precipitation_probability']?[index]?.toString() ??
               '0'),
+      weatherCode:
+          int.parse(map['current_weather']?['weathercode']?.toString() ?? '0'),
     );
   }
 
