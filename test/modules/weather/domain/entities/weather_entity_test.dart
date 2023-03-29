@@ -43,4 +43,16 @@ void main() {
     expect(weather1.copyWith(), weather1);
     expect(weather1.copyWith(rain: 20), weather2);
   });
+
+  test('should check an empty WeatherEntity', () async {
+    final weather1 = WeatherEntity(
+      temperature: 0,
+      windSpeed: 0,
+      humidity: 0,
+      rain: 0,
+      offlineData: false,
+    );
+
+    expect(weather1, WeatherEntity.empty());
+  });
 }

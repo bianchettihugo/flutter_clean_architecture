@@ -78,7 +78,7 @@ void main() {
       longitude: '10',
     );
 
-    expect(result, Result.failure(Failure('Weather error')));
+    expect(result, Result.failure(Failure('Weather error', statusCode: 0)));
     verify(() => remoteDatasource.fetchWeather(latitude: '10', longitude: '10'))
         .called(1);
     verify(() => localDatasource.fetchLast()).called(1);
@@ -97,7 +97,7 @@ void main() {
       longitude: '10',
     );
 
-    expect(result, Result.failure(Failure('Weather error')));
+    expect(result, Result.failure(Failure('Weather error', statusCode: -1)));
     verify(() => remoteDatasource.fetchWeather(latitude: '10', longitude: '10'))
         .called(1);
     verifyNever(() => localDatasource.fetchLast());
@@ -116,7 +116,7 @@ void main() {
       longitude: '10',
     );
 
-    expect(result, Result.failure(Failure('Weather error')));
+    expect(result, Result.failure(Failure('Weather error', statusCode: -1)));
     verify(() => remoteDatasource.fetchWeather(latitude: '10', longitude: '10'))
         .called(1);
     verifyNever(() => localDatasource.fetchLast());

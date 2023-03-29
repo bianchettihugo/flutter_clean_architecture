@@ -4,5 +4,11 @@
     "enableGeolocationBtn": "Check permissions",
     "geolocationError": "Geolocation error",
     "geolocationErrorMsg": "Something went wrong while collecting location information. Please, try again",
-    "geolocationErrorBtn": "Try again" 
+    "geolocationErrorBtn": "Try again",
+    "networkError": "Network error",
+    "networkErrorMsg": "Unable to connect to the internet. Please, check your connection and try again",
+    "networkErrorBtn": "Try again",
+    "weatherError": "Something went wrong",
+    "weatherErrorMsg": "Unable to fetch the weather. Please, try again",
+    "weatherErrorBtn": "Try again"
 }

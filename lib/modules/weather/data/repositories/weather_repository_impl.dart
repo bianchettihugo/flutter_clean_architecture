@@ -39,10 +39,10 @@ class WeatherRepositoryImpl extends WeatherRepository {
           offlineData: true,
         ));
       } else {
-        return Result.failure(Failure('Weather error'));
+        return Result.failure(Failure('Weather error', statusCode: 0));
       }
     } catch (_) {
-      return Result.failure(Failure('Weather error'));
+      return Result.failure(Failure('Weather error', statusCode: -1));
     }
   }
 }

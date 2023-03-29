@@ -13,6 +13,14 @@ class WeatherEntity {
     this.offlineData = false,
   });
 
+  WeatherEntity.empty({
+    this.temperature = 0,
+    this.windSpeed = 0,
+    this.humidity = 0,
+    this.rain = 0,
+    this.offlineData = false,
+  });
+
   @override
   bool operator ==(covariant WeatherEntity other) {
     if (identical(this, other)) return true;

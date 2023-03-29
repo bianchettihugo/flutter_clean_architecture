@@ -4,5 +4,11 @@
     "enableGeolocationBtn": "Checar permissões",
     "geolocationError": "Erro de geolocalização",
     "geolocationErrorMsg": "Algo deu errado ao coletar informações de localização. Por favor, tente novamente",
-    "geolocationErrorBtn": "Tentar novamente" 
+    "geolocationErrorBtn": "Tentar novamente",
+    "networkError": "Erro de conexão",
+    "networkErrorMsg": "Não foi possível conectar-se à internet. Por favor, verifique sua conexão e tente novamente",
+    "networkErrorBtn": "Tentar novamente",
+    "weatherError": "Algo deu errado",
+    "weatherErrorMsg": "Não foi possível obter o clima. Por favor, tente novamente",
+    "weatherErrorBtn": "Tentar novamente"
 }
