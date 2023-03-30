@@ -46,6 +46,7 @@ void main() {
       windSpeed: 15.5,
       humidity: humidity[DateTime.now().hour],
       rain: rain[DateTime.now().hour],
+      weatherCode: 3,
     );
 
     final result = await datasource.fetchWeather(latitude: '0', longitude: '0');

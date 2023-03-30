@@ -33,6 +33,7 @@ class WeatherController {
         _fetchWeatherColor = fetchWeatherColorUsecase;
 
   Future<void> fetchWeather() async {
+    color.value = const Color(0xff191919);
     status.value = WeatherPageStatus.loading;
 
     final userLocation = await _fetchLocation();
