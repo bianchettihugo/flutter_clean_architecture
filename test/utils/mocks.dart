@@ -11,9 +11,11 @@ import 'package:flutter_clean_architecture/core/services/permissions/permission_
 import 'package:flutter_clean_architecture/core/services/storage/storage_service.dart';
 import 'package:flutter_clean_architecture/modules/location/data/datasources/service_location_datasource.dart';
 import 'package:flutter_clean_architecture/modules/location/domain/repositories/location_repository.dart';
+import 'package:flutter_clean_architecture/modules/location/domain/usecases/fetch_location_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/data/datasources/local_weather_datasource.dart';
 import 'package:flutter_clean_architecture/modules/weather/data/datasources/remote_weather_datasource.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/repositories/weather_repository.dart';
+import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_usecase.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -53,3 +55,7 @@ class MockServiceLocationDatasource extends Mock
     implements ServiceLocationDatasource {}
 
 class MockLocationRepository extends Mock implements LocationRepository {}
+
+class MockFetchLocationUsecase extends Mock implements FetchLocationUsecase {}
+
+class MockFetchWeatherUsecase extends Mock implements FetchWeatherUsecase {}

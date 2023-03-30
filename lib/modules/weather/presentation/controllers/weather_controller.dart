@@ -5,6 +5,7 @@ import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch
 import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_usecase.dart';
 
 enum WeatherPageStatus {
+  initial,
   loading,
   permissionDenied,
   permissionError,
@@ -19,7 +20,7 @@ class WeatherController {
   final FetchWeatherUsecase _fetchWeather;
   final FetchWeatherColorUsecase _fetchWeatherColor;
 
-  final status = ValueNotifier<WeatherPageStatus>(WeatherPageStatus.loading);
+  final status = ValueNotifier<WeatherPageStatus>(WeatherPageStatus.initial);
   final weather = ValueNotifier<WeatherEntity>(WeatherEntity.empty());
   final color = ValueNotifier<Color>(const Color(0xff191919));
 
