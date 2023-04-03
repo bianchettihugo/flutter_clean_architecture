@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/core/styles/text_theme.dart';
 import 'package:flutter_clean_architecture/core/utils/application.dart';
+import 'package:flutter_clean_architecture/modules/location/location.dart';
+import 'package:flutter_clean_architecture/modules/modules.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/pages/weather_page.dart';
+import 'package:flutter_clean_architecture/modules/weather/weather.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  BaseModule.init();
+  LocationModule.init();
+  WeatherModule.init();
+
   runApp(const MyApp());
 }
 

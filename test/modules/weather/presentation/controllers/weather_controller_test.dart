@@ -4,6 +4,7 @@ import 'package:flutter_clean_architecture/modules/location/domain/entities/loca
 import 'package:flutter_clean_architecture/modules/location/domain/usecases/fetch_location_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/entities/weather_entity.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_color_usecase.dart';
+import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_icon_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/controllers/weather_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -17,16 +18,19 @@ void main() {
   late FetchLocationUsecase fetchLocation;
   late FetchWeatherUsecase fetchWeather;
   late FetchWeatherColorUsecase fetchColor;
+  late FetchWeatherIconUsecase fetchIcon;
   late WeatherController controller;
 
   setUp(() {
     fetchLocation = MockFetchLocationUsecase();
     fetchWeather = MockFetchWeatherUsecase();
     fetchColor = FetchWeatherColorUsecaseImpl();
+    fetchIcon = FetchWeatherIconUsecaseImpl();
     controller = WeatherController(
       fetchLocationUsecase: fetchLocation,
       fetchWeatherUsecase: fetchWeather,
       fetchWeatherColorUsecase: fetchColor,
+      fetchWeatherIconUsecase: fetchIcon,
     );
   });
 
@@ -159,9 +163,7 @@ void main() {
     await controller.fetchWeather();
   });
 
-  tearDownAll(() {
-    controller.color.dispose();
-    controller.status.dispose();
-    controller.weather.dispose();
+  test('should call dispose without errors', () async {
+    controller.dispose();
   });
 }
