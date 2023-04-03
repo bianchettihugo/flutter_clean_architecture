@@ -41,7 +41,7 @@ class SecondaryButton extends StatelessWidget {
             BorderSide(width: 2.0, color: Theme.of(context).primaryColor),
           ),
           minimumSize:
-              MaterialStateProperty.all<Size>(const Size(double.infinity, 63))),
+              MaterialStateProperty.all<Size>(const Size(double.infinity, 56))),
       icon: icon != null
           ? Transform.translate(
               offset: const Offset(-5, -0.7),

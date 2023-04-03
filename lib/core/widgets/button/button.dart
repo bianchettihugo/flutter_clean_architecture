@@ -48,7 +48,7 @@ class Button extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all<Color>(
               color ?? Theme.of(context).primaryColor),
           minimumSize:
-              MaterialStateProperty.all<Size>(const Size(double.infinity, 63))),
+              MaterialStateProperty.all<Size>(const Size(double.infinity, 56))),
       icon: icon != null
           ? Transform.translate(
               offset: const Offset(-5, -0.7),
