@@ -44,7 +44,7 @@ class WeatherErroWidget extends StatelessWidget {
           StyledText.titleLarge(title),
           const SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            padding: const EdgeInsets.symmetric(horizontal: 50),
             child: StyledText.bodyLarge(
               text,
               align: TextAlign.center,
