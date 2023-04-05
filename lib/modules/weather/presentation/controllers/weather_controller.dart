@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/core/constants/files.dart';
 import 'package:flutter_clean_architecture/modules/location/domain/usecases/fetch_location_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/entities/weather_entity.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_color_usecase.dart';
@@ -25,7 +26,7 @@ class WeatherController {
   final status = ValueNotifier<WeatherPageStatus>(WeatherPageStatus.initial);
   final weather = ValueNotifier<WeatherEntity>(WeatherEntity.empty());
   final color = ValueNotifier<Color>(const Color(0xff191919));
-  final icon = ValueNotifier<String>('');
+  final icon = ValueNotifier<String>(Files.cloudy);
 
   WeatherController({
     required FetchLocationUsecase fetchLocationUsecase,

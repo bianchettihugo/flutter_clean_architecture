@@ -5,6 +5,7 @@ import 'package:flutter_clean_architecture/modules/location/presentation/pages/l
 import 'package:flutter_clean_architecture/modules/weather/presentation/controllers/weather_controller.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/pages/weather_connection_error_page.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/pages/weather_error_page.dart';
+import 'package:flutter_clean_architecture/modules/weather/presentation/pages/weather_info_page.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/widgets/weather_color.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/widgets/weather_loading.dart';
 
@@ -56,7 +57,7 @@ class _WeatherPageState extends State<WeatherPage> {
                     case WeatherPageStatus.loading:
                       return const WeatherLoading();
                     default:
-                      return const WeatherLoading();
+                      return const WeatherInfoPage();
                   }
                 },
               );
