@@ -17,24 +17,24 @@ class WeatherCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Theme.of(context).primaryColor.withOpacity(0.5),
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.black.withOpacity(0.15),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(iconPath, width: 32),
-          const SizedBox(width: 5),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              StyledText.displaySmall(title),
-              StyledText.bodyMedium(content),
+              StyledText.bodySmall(title),
+              StyledText.titleMedium(content),
             ],
           ),
         ],

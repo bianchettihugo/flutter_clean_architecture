@@ -10,11 +10,11 @@ void main() {
     await tester.pumpWidgetWithApp(WeatherCard(
       iconPath: Files.drops,
       content: '10',
-      title: 'Humidade',
+      title: 'Umidade',
     ));
 
     expect(find.byType(Image), findsOneWidget);
     expect(find.text('10'), findsOneWidget);
-    expect(find.text('Humidade'), findsOneWidget);
+    expect(find.text('Umidade'), findsOneWidget);
   });
 }

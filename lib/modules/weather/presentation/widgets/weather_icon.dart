@@ -23,13 +23,14 @@ class WeatherIcon extends StatelessWidget {
             height: 100,
             child: Stack(
               fit: StackFit.loose,
+              alignment: Alignment.center,
               children: [
                 Opacity(
-                  opacity: 0.4,
-                  child: Image.asset(icon, width: 164),
+                  opacity: 0.07,
+                  child: Image.asset(icon, width: 124),
                 ),
                 Transform.translate(
-                  offset: const Offset(-12, -30),
+                  offset: const Offset(-30, 10),
                   child: Align(
                     alignment: Alignment.bottomRight,
                     child: Row(
@@ -37,8 +38,9 @@ class WeatherIcon extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        StyledText.bodyLarge(temperature),
-                        StyledText.displaySmall('°C'),
+                        StyledText.displayMedium(temperature),
+                        const SizedBox(width: 5),
+                        StyledText.bodyLarge('°C'),
                       ],
                     ),
                   ),

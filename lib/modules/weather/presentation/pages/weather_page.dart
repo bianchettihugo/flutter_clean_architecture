@@ -57,7 +57,9 @@ class _WeatherPageState extends State<WeatherPage> {
                     case WeatherPageStatus.loading:
                       return const WeatherLoading();
                     default:
-                      return const WeatherInfoPage();
+                      return WeatherInfoPage(
+                        controller: _controller,
+                      );
                   }
                 },
               );
