@@ -24,7 +24,10 @@ class WeatherIcon extends StatelessWidget {
             child: Stack(
               fit: StackFit.loose,
               children: [
-                Image.asset(icon, width: 164),
+                Opacity(
+                  opacity: 0.4,
+                  child: Image.asset(icon, width: 164),
+                ),
                 Transform.translate(
                   offset: const Offset(-12, -30),
                   child: Align(

@@ -9,4 +9,8 @@ class Files {
   static String get snow => 'assets/snow.png';
   static String get storm => 'assets/storm.png';
   static String get sun => 'assets/sun.png';
+
+  static String get cloud => 'assets/cloud_drops.png';
+  static String get drops => 'assets/drops.png';
+  static String get wind => 'assets/wind.png';
 }
