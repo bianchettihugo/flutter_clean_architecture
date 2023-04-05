@@ -1,3 +1,4 @@
+import 'package:animated_digit/animated_digit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/core/styles/typography.dart';
 import 'package:flutter_clean_architecture/modules/weather/presentation/controllers/weather_controller.dart';
@@ -26,7 +27,7 @@ class WeatherIcon extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Opacity(
-                  opacity: 0.07,
+                  opacity: 0.2,
                   child: Image.asset(icon, width: 124),
                 ),
                 Transform.translate(
@@ -38,7 +39,10 @@ class WeatherIcon extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        StyledText.displayMedium(temperature),
+                        AnimatedDigitWidget(
+                          value: double.parse(temperature).round(),
+                          textStyle: Theme.of(context).textTheme.displayMedium,
+                        ),
                         const SizedBox(width: 5),
                         StyledText.bodyLarge('°C'),
                       ],

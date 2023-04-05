@@ -10,5 +10,9 @@
     "networkErrorBtn": "Try again",
     "weatherError": "Something went wrong",
     "weatherErrorMsg": "Unable to fetch the weather. Please, try again",
-    "weatherErrorBtn": "Try again"
+    "weatherErrorBtn": "Try again",
+    "wind": "Wind",
+    "humidity": "Humidity",
+    "rain": "Rain",
+    "offline": "You are currently offline. Showing the last saved weather on the device"
 }

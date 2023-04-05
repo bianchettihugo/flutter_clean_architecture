@@ -1,3 +1,5 @@
+import 'package:flutter_clean_architecture/core/services/connection/connection_service.dart';
+import 'package:flutter_clean_architecture/core/services/connection/connection_service_impl.dart';
 import 'package:flutter_clean_architecture/core/services/dependency/dependency_service.dart';
 import 'package:flutter_clean_architecture/core/services/http/http_service.dart';
 import 'package:flutter_clean_architecture/core/services/http/http_service_impl.dart';
@@ -14,5 +16,6 @@ class BaseModule {
     Dependency.register<StorageService>(StorageServiceImpl());
     Dependency.register<LocationService>(LocationServiceImpl());
     Dependency.register<PermissionService>(PermissionServiceImpl());
+    Dependency.register<ConnectionService>(ConnectionServiceImpl());
   }
 }

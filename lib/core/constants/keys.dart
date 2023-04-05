@@ -3,4 +3,5 @@ class Keys {
   static String windSpeed = 'key_windSpeed';
   static String humidity = 'key_humidity';
   static String rain = 'key_rain';
+  static String code = 'key_code';
 }

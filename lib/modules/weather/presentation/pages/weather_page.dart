@@ -23,6 +23,9 @@ class _WeatherPageState extends State<WeatherPage> {
   void initState() {
     _controller = Dependency.get<WeatherController>();
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _controller.fetchWeather();
+    });
   }
 
   @override

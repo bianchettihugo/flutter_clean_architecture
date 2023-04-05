@@ -10,5 +10,9 @@
     "networkErrorBtn": "Tentar novamente",
     "weatherError": "Algo deu errado",
     "weatherErrorMsg": "Não foi possível obter o clima. Por favor, tente novamente",
-    "weatherErrorBtn": "Tentar novamente"
+    "weatherErrorBtn": "Tentar novamente",
+    "wind": "Vento",
+    "humidity": "Umidade",
+    "rain": "Chuva",
+    "offline": "Você está offline no momento. Mostrando o último clima salvo no dispositivo"
 }

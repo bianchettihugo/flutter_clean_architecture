@@ -23,11 +23,13 @@ class LocalWeatherDatasourceImpl extends LocalWeatherDatasource {
     final rain = await _storageService.read(Keys.rain);
     final humidity = await _storageService.read(Keys.humidity);
     final windSpeed = await _storageService.read(Keys.windSpeed);
+    final weatherCode = await _storageService.read(Keys.code);
 
     if (weather == null ||
         rain == null ||
         humidity == null ||
-        windSpeed == null) {
+        windSpeed == null ||
+        weatherCode == null) {
       return null;
     }
 
@@ -36,6 +38,7 @@ class LocalWeatherDatasourceImpl extends LocalWeatherDatasource {
       windSpeed: double.parse(windSpeed),
       humidity: double.parse(humidity),
       rain: double.parse(rain),
+      weatherCode: int.parse(weatherCode),
     );
   }
 
@@ -45,5 +48,6 @@ class LocalWeatherDatasourceImpl extends LocalWeatherDatasource {
     await _storageService.save(Keys.rain, weather.rain.toString());
     await _storageService.save(Keys.humidity, weather.humidity.toString());
     await _storageService.save(Keys.windSpeed, weather.windSpeed.toString());
+    await _storageService.save(Keys.code, weather.weatherCode.toString());
   }
 }
