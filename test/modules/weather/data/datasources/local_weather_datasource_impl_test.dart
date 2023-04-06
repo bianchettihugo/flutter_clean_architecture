@@ -24,6 +24,7 @@ void main() {
       windSpeed: 0.0,
       humidity: 0.0,
       rain: 0.0,
+      weatherCode: 0,
     );
 
     when(() => storageService.save(Keys.weather, '0.0')).thenAnswer(
@@ -38,6 +39,9 @@ void main() {
     when(() => storageService.save(Keys.windSpeed, '0.0')).thenAnswer(
       (invocation) async => true,
     );
+    when(() => storageService.save(Keys.code, '0')).thenAnswer(
+      (invocation) async => true,
+    );
 
     when(() => storageService.read(Keys.weather)).thenAnswer(
       (invocation) async => deleted ? null : '0.0',
@@ -50,6 +54,9 @@ void main() {
     );
     when(() => storageService.read(Keys.windSpeed)).thenAnswer(
       (invocation) async => deleted ? null : '0.0',
+    );
+    when(() => storageService.read(Keys.code)).thenAnswer(
+      (invocation) async => deleted ? null : '0',
     );
 
     when(() => storageService.delete(Keys.weather)).thenAnswer(

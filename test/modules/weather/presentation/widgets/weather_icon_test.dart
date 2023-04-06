@@ -1,3 +1,4 @@
+import 'package:animated_digit/animated_digit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/modules/location/domain/usecases/fetch_location_usecase.dart';
 import 'package:flutter_clean_architecture/modules/weather/domain/usecases/fetch_weather_color_usecase.dart';
@@ -37,7 +38,7 @@ void main() {
     ));
 
     expect(find.byType(Image), findsOneWidget);
-    expect(find.text('10'), findsOneWidget);
+    expect(find.byType(AnimatedDigitWidget), findsOneWidget);
     expect(find.text('°C'), findsOneWidget);
   });
 }
