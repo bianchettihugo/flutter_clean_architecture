@@ -10,7 +10,9 @@ import 'package:flutter_clean_architecture/modules/weather/presentation/widgets/
 import 'package:flutter_clean_architecture/modules/weather/presentation/widgets/weather_loading.dart';
 
 class WeatherPage extends StatefulWidget {
-  const WeatherPage({super.key});
+  final WeatherController? controller;
+
+  const WeatherPage({this.controller, super.key});
 
   @override
   State<WeatherPage> createState() => _WeatherPageState();
@@ -21,7 +23,7 @@ class _WeatherPageState extends State<WeatherPage> {
 
   @override
   void initState() {
-    _controller = Dependency.get<WeatherController>();
+    _controller = widget.controller ?? Dependency.get<WeatherController>();
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _controller.fetchWeather();
