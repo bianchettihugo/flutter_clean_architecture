@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_clean_architecture/core/styles/text_theme.dart';
 import 'package:flutter_clean_architecture/core/utils/application.dart';
 import 'package:flutter_clean_architecture/modules/location/location.dart';
@@ -15,6 +16,7 @@ void main() {
   LocationModule.init();
   WeatherModule.init();
 
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
