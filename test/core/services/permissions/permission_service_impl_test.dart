@@ -18,6 +18,10 @@ void main() {
     );
   });
 
+  test('should create a default PermissionService', () {
+    PermissionServiceImpl();
+  });
+
   test('should return true when location permission is granted', () async {
     when(() => mockPermissionHandler.request(Permission.location)).thenAnswer(
       (invocation) async => PermissionStatus.granted,

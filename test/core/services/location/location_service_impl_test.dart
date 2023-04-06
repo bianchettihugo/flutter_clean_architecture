@@ -18,6 +18,10 @@ void main() {
     locationService = LocationServiceImpl(geolocator: geolocatorHandler);
   });
 
+  test('should create a default LocationService', () {
+    LocationServiceImpl();
+  });
+
   test(
       'should throw an PermissionException when location service is not enabled',
       () async {

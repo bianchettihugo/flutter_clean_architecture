@@ -15,7 +15,7 @@ void main() {
   });
 
   testWidgets('should render a button with an icon', (tester) async {
-    await tester.pumpWidgetWithApp(SecondaryButton(
+    await tester.pumpWidgetWithApp(SecondaryButton.small(
         text: 'Click', icon: Icons.ac_unit_outlined, onTap: () {}));
 
     expect(find.byType(SecondaryButton), findsOneWidget);
@@ -28,7 +28,7 @@ void main() {
 
   testWidgets('should perform action on tap', (tester) async {
     int test = 0;
-    await tester.pumpWidgetWithApp(SecondaryButton(
+    await tester.pumpWidgetWithApp(SecondaryButton.big(
         text: 'Click',
         icon: Icons.ac_unit_outlined,
         onTap: () {

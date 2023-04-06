@@ -27,6 +27,10 @@ void main() {
     );
   });
 
+  test('should create a default ConnectionService', () {
+    ConnectionServiceImpl();
+  });
+
   test('should be able to listen network changes', () async {
     List<ConnectionEvent> results = [];
 

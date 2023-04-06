@@ -26,7 +26,7 @@ void main() {
 
   testWidgets('should perform action on tap', (tester) async {
     int test = 0;
-    await tester.pumpWidgetWithApp(Button(
+    await tester.pumpWidgetWithApp(Button.big(
         text: 'Click',
         icon: Icons.ac_unit_outlined,
         onTap: () {
