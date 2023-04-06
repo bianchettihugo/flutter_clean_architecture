@@ -59,8 +59,8 @@ class WeatherEntity {
       windSpeed: windSpeed ?? this.windSpeed,
       humidity: humidity ?? this.humidity,
       rain: rain ?? this.rain,
-      offlineData: offlineData ?? this.offlineData,
       weatherCode: weatherCode ?? this.weatherCode,
+      offlineData: offlineData ?? this.offlineData,
     );
   }
 }
