@@ -15,24 +15,29 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  intl: ^0.17.0
+  intl: ^0.18.1
   cupertino_icons: ^1.0.2
   get_it: ^7.2.0
   dio: ^5.0.3
   equatable: ^2.0.5
   shared_preferences: ^2.0.20
-  connectivity_plus: ^3.0.3
-  permission_handler: ^10.2.0
-  geolocator: ^9.0.2
-  google_fonts: ^4.0.3
+  connectivity_plus: ^4.0.2
+  permission_handler: ^11.0.0
+  geolocator: ^10.0.1
+  google_fonts: ^5.1.0
   animated_digit: ^3.2.1
+
+dependency_overrides:
+  test_api: 0.5.2
+  matcher: 0.12.16
+  dio: 5.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
-  mocktail: ^0.3.0
+  mocktail: ^1.0.0
   value_listenable_test: ^0.0.1
 
 

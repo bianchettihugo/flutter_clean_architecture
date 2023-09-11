@@ -6,7 +6,7 @@ class Dependency {
   }
 
   static void register<T extends Object>(T instance) {
-    return GetIt.I.registerSingleton<T>(instance);
+    GetIt.I.registerSingleton<T>(instance);
   }
 
   static void registerLazy<T extends Object>(T instance) {

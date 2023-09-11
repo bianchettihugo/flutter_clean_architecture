@@ -7,7 +7,24 @@ import 'package:permission_handler/permission_handler.dart';
 void main() {
   test('permission handler plugin tests', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
-    const MethodChannel('flutter.baseflow.com/permissions/methods')
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
+      const MethodChannel('flutter.baseflow.com/permissions/methods'),
+      (MethodCall methodCall) async {
+        if (methodCall.method == "openAppSettings") {
+          return true;
+        } else if (methodCall.method == "requestPermissions") {
+          return <dynamic, dynamic>{
+            2: 1,
+          };
+        } else if (methodCall.method == "checkPermissionStatus") {
+          return 0;
+        }
+
+        return 0;
+      },
+    );
+    /*const MethodChannel('flutter.baseflow.com/permissions/methods')
         .setMockMethodCallHandler((MethodCall methodCall) async {
       if (methodCall.method == "openAppSettings") {
         return true;
@@ -18,7 +35,7 @@ void main() {
       } else if (methodCall.method == "checkPermissionStatus") {
         return 0;
       }
-    });
+    });*/
 
     WidgetsFlutterBinding.ensureInitialized();
     final handler = PermissionHandler();

@@ -17,8 +17,15 @@ void main() {
 
   test('should create a storage service', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
-    const MethodChannel('plugins.flutter.io/shared_preferences')
-        .setMockMethodCallHandler((MethodCall methodCall) async {});
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
+      const MethodChannel('plugins.flutter.io/shared_preferences'),
+      (MethodCall methodCall) async {
+        return null;
+      },
+    );
+    //const MethodChannel('plugins.flutter.io/shared_preferences')
+    //    .setMockMethodCallHandler((MethodCall methodCall) async {});
     StorageServiceImpl(MockStorage());
     StorageServiceImpl();
   });
